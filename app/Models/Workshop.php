@@ -20,15 +20,15 @@ class Workshop extends Model
 
     public function setNameAttribute($value) {
         $this->attributes ['name'] = $value;
-        $this->attributes ['slug'] = Str::slug($value);
+        $this->attributes ['slug'] = Str::slug($value, '-');
     }
 
     public function benefits() {
-        return $this->hasMany(WorkshopBenefit:: class);
+        return $this->hasMany(WorkshopBenefit::class);
     }
 
     public function participants() {
-        return $this->hasMany(WorkshopParcipant:: class);
+        return $this->hasMany(WorkshopParticipant::class);
     }
 
     public function category() {

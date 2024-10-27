@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('occupation');
             $table->string('email')->unique();
-            $table->foreignId('workshop_id');
-            $table->foreignId('booking_transaction_id');
+            $table->foreignId('workshop_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('booking_transaction_id')->constrained()->cascadeOnDelete();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

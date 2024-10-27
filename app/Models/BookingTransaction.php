@@ -23,10 +23,10 @@ class BookingTransaction extends Model
     }
     
     public function participants() {
-        return $this->hasMany(WorkshopParcipant:: class);
+        return $this->hasMany(WorkshopParticipant::class);
     }
 
-    public function workshops() {
+    public function workshop() {
         return $this->belongsTo(Workshop::class, 'workshop_id', 'id');
     }
 }

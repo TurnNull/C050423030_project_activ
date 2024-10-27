@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('workshop_benefits', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('workshop_id');
+            $table->foreignId('workshop_id')->constrained()->cascadeOnDelete();
             $table->softDeletes();
             $table->timestamps();
         });

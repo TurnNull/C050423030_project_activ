@@ -25,8 +25,8 @@ return new class extends Migration
             $table->boolean('has_started');
             $table->date('started_at');
             $table->time('time_at');
-            $table->foreignId('category_id');
-            $table->foreignId('workshop_instructor_id');
+            $table->foreignId('category_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('workshop_instructor_id')->constrained()->cascadeOnDelete();
             $table->softDeletes();
             $table->timestamps();
         });

@@ -13,7 +13,7 @@ class WorkshopParticipant extends Model
     protected $table = 'workshop_participants';
     protected $guarded = ['id'];
 
-    public function workshops() {
+    public function workshop() {
         return $this->belongsTo(Workshop::class, 'workshop_id', 'id');
     }
 
