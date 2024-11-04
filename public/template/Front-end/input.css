@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: "Poppins";
+    color: #09093C;
+    background-color: #F5F6FB;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.gradient-border {
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #f06, #ffba00);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    box-shadow: 0 0 0 5px #fff;
+}
